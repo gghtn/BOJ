@@ -11,9 +11,9 @@ int selfN(int a){
 
 int main(){
     int arr[10001] = {0,};
-    for(int i =1; i<10000;i++){
-        if(arr[i] = 0) cout << i << endl;
-        arr[selfN(i)] = 1;
+    for(int i =1; i<=10000;i++){
+        if(arr[i] == 0) cout << i << endl;
+        if(selfN(i) <= 10000) arr[selfN(i)] = 1;
     }
     return 0;
 }
