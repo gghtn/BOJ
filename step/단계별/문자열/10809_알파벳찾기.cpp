@@ -2,7 +2,7 @@
 각각의 알파벳에 대해서, 단어에 포함되어 있는 경우에는 처음 등장하는 위치를, 포함되어 있지 않은 경우에는 -1을 출력하는 프로그램*/
 /*<string>의 find함수를 사용할 수 있음
 string s;
-stirng alp ="abcdefghijklmnopqrstuvwxyz";
+string alp ="abcdefghijklmnopqrstuvwxyz";
 cin>>s;
 for(int i = 0; i<alp.length();i++)
     cout << (int)s.find(alp[i]) << " ";
