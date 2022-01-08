@@ -24,7 +24,6 @@ int main(){
             one = false;
         }
     }
-
     if (one == true) cout << char(mode+65);
     else cout << '?';
 
