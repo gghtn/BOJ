@@ -2,12 +2,13 @@
 #include<iostream>
 using namespace std;
 
-int main(){
+int main() {
     string s;
+    cin >> s;
     int alphabet[26];
-    fill_n(alphabet,26,-1);
-    for(int i=0;i<s.length();i++){
-        alphabet[s[i]-'a'] = i;
+    fill_n(alphabet, 26, -1);
+    for (int i = 0;i < s.length();i++) {
+        if (alphabet[s[i] - 'a'] == -1) alphabet[s[i] - 'a'] = i;
     }
     for (int i = 0; i < 26;i++) {
         cout << alphabet[i] << ' ';
