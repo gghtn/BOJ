@@ -29,12 +29,7 @@ int main(){
 /*
 최대공약수 유클리드 호제법
 int gcd(int a, int b){
-    int c = a % b;
-    while(c != 0){
-        a = b;
-        b = c;
-        c = a % b;
-    }
-    return b;
+    if(a % b == 0) return b;
+    else return gcd(b,a%b);
 }
 */
