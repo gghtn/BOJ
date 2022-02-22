@@ -2,7 +2,7 @@
 //유클리드 호제법
 #include<iostream>
 #include<vector>
-using namespace std;
+using namespace std; 
 
 int gcd(int a, int b) {
     if (a % b == 0) return b;
