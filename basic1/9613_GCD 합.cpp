@@ -1,5 +1,5 @@
 //양의 정수 n개가 주어졌을 때, 가능한 모든 쌍의 GCD의 합을 구하는 프로그램을 작성하시오
-//자료형 주의, 유클리드 호제법
+//유클리드 호제법
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -16,7 +16,7 @@ int main() {
 
     for (;t != 0;t--) {
         int n, x;
-        long long sum = 0;
+        long long sum = 0;  //1,000,000이 100개 있을 경우 즉, 최댓값이 49억5천만이므로 int형을 넘는다.
         cin >> n;
         for (int i = 0; i < n; i++) {
             cin >> x;
