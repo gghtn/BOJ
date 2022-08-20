@@ -8,6 +8,7 @@ for(int i = 0; i<alp.length();i++)
     cout << (int)s.find(alp[i]) << " ";
 */
 #include <iostream>
+
 using namespace std;
 
 int main() {
