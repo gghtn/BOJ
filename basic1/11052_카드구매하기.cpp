@@ -5,14 +5,28 @@
 */
 #include<iostream>
 #include<vector>
+#include<algorithm>
 using namespace std;
 
-int main(){
-    int n;
+int main() {
+    int n, total = 0;
     cin >> n;
-    vector<int> v(n+1);
-    for(int i=1; i<=n; i++){
-        cin >> v[i];
+
+    vector<int> v1(n + 1);
+    vector<float> v2(n + 1);
+    for (int i = 1; i <= n; i++) {
+        cin >> v1[i];
+        v2[i] = v1[i] / i;
     }
-    
+
+    while (true) {
+        if (n == 0) break;
+        int index = max_element(v2.begin(), v2.end()) - v2.begin();
+        if (index <= n) {
+            n -= index;
+            total += v1[index];
+        }
+        else v2[index] = 0;
+    }
+    cout << total;
 }
