@@ -5,28 +5,32 @@
 */
 #include<iostream>
 #include<vector>
-#include<algorithm>
 using namespace std;
 
 int main() {
-    int n, total = 0;
+    int n;
     cin >> n;
 
-    vector<int> v1(n + 1);
-    vector<float> v2(n + 1);
-    for (int i = 1; i <= n; i++) {
-        cin >> v1[i];
-        v2[i] = v1[i] / i;
-    }
+    vector<int> card(n + 1);
+    vector<int> Max(n + 1);
 
-    while (true) {
-        if (n == 0) break;
-        int index = max_element(v2.begin(), v2.end()) - v2.begin();
-        if (index <= n) {
-            n -= index;
-            total += v1[index];
+    for (int i = 1; i <= n; i++) cin >> card[i];
+
+    for(int i=1; i<=n;i++)
+        for (int j = 1; j <= i; j++) {
+            Max[i] = max(Max[i], Max[i - j] + card[j]);
         }
-        else v2[index] = 0;
-    }
-    cout << total;
+
+    cout << Max[n];
+
+    return 0;
 }
+
+/*
+카드 금액의 최댓값은
+n개를 샀을 때
+n-1개를 샀을 때의 최댓값 + 카드 1개 값
+n-2개를 샀을 때의 최댓값 + 카드 2개의 값
+....
+중에 최댓값을 구하면된다.
+*/
