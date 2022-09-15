@@ -36,7 +36,6 @@ void quick(int list[], int low, int high) {
 	}
 }*/
 
-
 int main() {
 	int N;
 	cin >> N;
