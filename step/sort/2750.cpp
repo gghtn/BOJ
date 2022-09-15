@@ -21,6 +21,7 @@ int main() {
 	}
 	return 0;
 }
+
 /*삽입정렬
 int N;
 cin >> N;
