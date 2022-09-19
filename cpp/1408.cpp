@@ -11,6 +11,7 @@ int main() {
 	now.erase(remove(now.begin(), now.end(), ':'), now.end());
 	start.erase(remove(start.begin(), start.end(), ':'), start.end());
 
+    //문자열 자르기
 	int n, s, result = 0;
 	n = stoi(now.substr(0, 2)) * 3600 + stoi(now.substr(2, 2)) * 60 + stoi(now.substr(4, 2));
 	s = stoi(start.substr(0, 2)) * 3600 + stoi(start.substr(2, 2)) * 60 + stoi(start.substr(4, 2));
