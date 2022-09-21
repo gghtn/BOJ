@@ -2,7 +2,7 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-
+//벡터의 인덱스 찾기
 int main() {
 	int n, max = 0, index;
 	vector<int> v;
