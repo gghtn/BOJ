@@ -47,16 +47,19 @@ int main() {
 	int T;
 	string str;
 	cin >> T;
-	/*while (T--) {
+	while (T--) {
 		cin >> str;
 		cout <<( __regex(str) ? "YES" : "NO" )<< '\n';
-	}*/
-	regex pattern("(100+1+|01)+");
+	}
+
+	/* regex사용 시
+    regex pattern("(100+1+|01)+");
 	while (T--) {
 		cin >> str;
 		if (regex_match(str, pattern)) cout << "YES\n";
 		else cout << "NO\n";
 	}
+    */
 
 	return 0;
 }
