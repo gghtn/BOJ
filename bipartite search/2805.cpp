@@ -9,7 +9,7 @@ vector<int> v;
 int search(int left, int right, int m)
 {
 	int result;
-	long long total;
+	long long total;	// int의 범위가 넘어갈 수 있으므로
 	while (left <= right || total < m)
 	{
 		result = (left + right) / 2;
