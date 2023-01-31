@@ -38,6 +38,9 @@ int main()
 
 		itr = m.find(str);
 		cout << itr->second << '\n';
+
+		//cout << m.at(str) << '\n'; 
+		//cout << m[str] << '\n';
 	}
 
 	return 0;
