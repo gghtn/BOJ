@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int index, left, right;
+int index;
 int iArr[100001];
 
 void Swap(int _idx1, int _idx2)
